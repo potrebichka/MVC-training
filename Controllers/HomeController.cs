@@ -42,7 +42,8 @@ namespace MVC1.Controllers
         }
         public ActionResult GetPaySlip(int EmpId)
         {
-            return View();
+            string fileName = "~/PaySlip" + EmpId + ".pdf";
+            return File(fileName, "application/pdf");
         }
     }
 }
