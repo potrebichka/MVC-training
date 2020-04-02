@@ -72,6 +72,7 @@ namespace MVC1.Controllers
             ViewBag.StudentName = "Scott";
             ViewBag.Marks = 50;
             ViewBag.NoOfSemesters = 6;
+            ViewBag.Subjects = new List<string> { "Maths", "Physics", "Chemistry" };
             return View();
         }
     }
