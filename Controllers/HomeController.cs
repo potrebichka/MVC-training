@@ -75,5 +75,16 @@ namespace MVC1.Controllers
             ViewBag.Subjects = new List<string> { "Maths", "Physics", "Chemistry" };
             return View();
         }
+        public ActionResult RequestExample()
+        {
+            ViewBag.Url = Request.Url;
+            ViewBag.PhysicalApplicationPath = Request.PhysicalApplicationPath;
+            ViewBag.Path = Request.Path;
+            ViewBag.BrowserType = Request.Browser.Type;
+            ViewBag.QueryString = Request.QueryString["n"];
+            ViewBag.Headers = Request.Headers["Accept"];
+            ViewBag.HttpMethod = Request.HttpMethod;
+            return View();
+        }
     }
 }
